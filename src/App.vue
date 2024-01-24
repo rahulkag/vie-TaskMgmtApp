@@ -21,8 +21,17 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style lang="scss">
+body {
+  padding: 0%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
 .header {
   grid-area: header;
+  background-color: #0764a9;
+  padding: 15px;
+  color: #fff;
 }
 
 .main {
@@ -40,8 +49,8 @@ import { RouterLink, RouterView } from 'vue-router'
     'main'
     'footer';
   gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+  background-color: #f3f3f3;
+
 }
 
 .grid-container>div {
@@ -52,6 +61,12 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 nav a {
-  color: $color-primary
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #035998;
+  }
 }
 </style>

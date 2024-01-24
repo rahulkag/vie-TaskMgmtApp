@@ -4,6 +4,7 @@ export default {
     props: [''],
     data() {
         return {
+            alertTaskAdded: false,
             task: {
                 name: '',
                 status: '',
@@ -19,7 +20,6 @@ export default {
     },
     methods: {
         async addTask(){
-            console.log(this.task)
             let task = {...this.task, id: 'task_'+ Math.random()}
             try {
                 await fetch('http://localhost:3000/taskListData',{
@@ -29,9 +29,11 @@ export default {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(" post : ", data);
                     this.$refs.addTaskForm.reset();
-                    // confirm("data saved")
+                    this.alertTaskAdded = true;
+                    setTimeout(() =>{
+                      this.alertTaskAdded = false;
+                    }, 1500)
                 })
             } catch(error){
                 console.error("Error", error);

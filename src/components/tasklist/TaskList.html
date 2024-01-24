@@ -1,12 +1,13 @@
 <div>
-    <button @click="addNewTask">Add New Task</button>
-    <ul>
-        <li v-for="value in taskListData" :key="value.id">
-            Name: {{value.name}} <br />
-            Status: {{value.status}} <br />
-            Due Date: {{value.dueDate}} <br />
-
-            <button v-if="value.status !== 'completed'" @click="onTaskComplete(value.id)">Complete</button>
-        </li>
-    </ul>
+<div v-show="alertTaskCompleted" class="alert alert-success" role="alert">
+    Task completed
+  </div>
+<ul class="list">
+    <li v-for="value in taskListData" :key="value.id" class="list-item">
+        <div><span>Name:</span> {{value.name}}</div>
+        <div><span>Status:</span> {{value.status}}</div>
+        <div><span>Due Date:</span> {{value.dueDate}}</div>
+        <button v-if="value.status !== 'completed'" @click="onTaskComplete(value.id)">Mark Complete</button>
+    </li>
+</ul>
 </div>

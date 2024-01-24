@@ -1,3 +1,22 @@
-ul {
-    
+.add-task-container{
+  text-align: center;
+  label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  } 
+}
+button {
+  display: block;
+  min-width: 100px;
+  appearance: none;
+  color: white;
+  padding: 10px;
+  background: #1464a8;
+  border: none;
+  cursor: pointer;
+  &:hover{
+      background-color: #fff;
+      color: #044d81;
+      box-shadow: 0px 0px 4px #000;
   }
+}

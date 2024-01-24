@@ -1,31 +1,27 @@
-<div class="add-task-container">
+<div class="add-task-container margin-20">
+    <div v-show="alertTaskAdded" class="alert alert-success" role="alert">
+        Task added
+      </div>
     <form @submit.prevent="addTask" ref="addTaskForm">
-        <label for="taskName">Task Name</label>
-        <input 
-            type="text" 
-            name="taskName" 
-            v-model="task.name" 
-            placeholder="Enter task name"
-            autocomplete="off"
-            :rules="rules"
-            required
-            >
-        <br />
-        <label for="status">Status</label>
-        <select name="status" v-model="task.status">
-            <option value="active">active</option>
-            <option value="pending">pending</option>
-            <option value="completed">completed</option>
-        </select>
-        <br />
-        <label for="dueDate">Due Date</label>
-        <input 
-            type="date" 
-            name="dueDate" 
-            v-model="task.dueDate"
-            :min="new Date().toISOString().split('T')[0]"  
-        >
-        <br />
-        <button type="submit">Add Task</button>
+        <div class="form-group">
+            <label for="taskName">Task Name</label>
+            <input class="form-control" type="text" name="taskName" v-model="task.name" placeholder="Enter task name" autocomplete="off"
+                :rules="rules" required>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select class="custom-select" name="status" v-model="task.status">
+                <option value="">--Please choose an option--</option>
+                <option value="active">active</option>
+                <option value="pending">pending</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dueDate">Due Date</label>
+            <input class="form-control" type="date" name="dueDate" v-model="task.dueDate" :min="new Date().toISOString().split('T')[0]">
+        </div>
+        <div class="form-group">
+            <button type="submit">Add Task</button>
+        </div>
     </form>
 </div>

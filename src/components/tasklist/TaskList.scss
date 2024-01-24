@@ -3,10 +3,20 @@ ul {
     padding: 0;
     list-style: none;
   }
-li{
+.list-item{
     text-align: left;
     padding: 10px;
     &:nth-child(odd){
         background-color: whitesmoke;
     }
+    span{
+        width: 100px;
+        display: inline-block;
+        color: #044d81;
+    }
+    div {
+        line-height: 1.5;
+        padding-bottom: 2px;
+    }
+    
 }

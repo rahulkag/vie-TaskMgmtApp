@@ -2,9 +2,9 @@ export default {
     name: "TaskListContainer",
     props: [''],
     data() {
-        console.log("storedata:", this.$store.state.taskListData)
         return {
             taskListData: this.$store.state.taskListData,
+            alertTaskCompleted: false
         };
     },
     async created() {
@@ -35,9 +35,10 @@ export default {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(" post : ", data);
-                    
-                    confirm("status changed")
+                    this.alertTaskCompleted = true;
+                    setTimeout(() => {
+                        this.alertTaskCompleted = false
+                    },1500)
                 })
             } catch(error){
                 console.error("Error", error);
