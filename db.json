@@ -1,10 +1,6 @@
 {
   "taskListData": [
     {
-      "status": "completed",
-      "id": "task_0.6189349086295355"
-    },
-    {
       "name": "firstsecond",
       "status": "completed",
       "dueDate": "2024-01-24",
@@ -54,7 +50,7 @@
     },
     {
       "name": "sfdsf",
-      "status": "active",
+      "status": "completed",
       "dueDate": "2024-01-25",
       "id": "task_0.4836679833437827"
     },
