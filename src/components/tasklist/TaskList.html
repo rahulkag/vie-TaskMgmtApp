@@ -1,0 +1,12 @@
+<div>
+    <button @click="addNewTask">Add New Task</button>
+    <ul>
+        <li v-for="value in taskListData" :key="value.id">
+            Name: {{value.name}} <br />
+            Status: {{value.status}} <br />
+            Due Date: {{value.dueDate}} <br />
+
+            <button v-if="value.status !== 'completed'" @click="onTaskComplete(value.id)">Complete</button>
+        </li>
+    </ul>
+</div>

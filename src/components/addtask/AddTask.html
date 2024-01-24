@@ -1,0 +1,31 @@
+<div class="add-task-container">
+    <form @submit.prevent="addTask" ref="addTaskForm">
+        <label for="taskName">Task Name</label>
+        <input 
+            type="text" 
+            name="taskName" 
+            v-model="task.name" 
+            placeholder="Enter task name"
+            autocomplete="off"
+            :rules="rules"
+            required
+            >
+        <br />
+        <label for="status">Status</label>
+        <select name="status" v-model="task.status">
+            <option value="active">active</option>
+            <option value="pending">pending</option>
+            <option value="completed">completed</option>
+        </select>
+        <br />
+        <label for="dueDate">Due Date</label>
+        <input 
+            type="date" 
+            name="dueDate" 
+            v-model="task.dueDate"
+            :min="new Date().toISOString().split('T')[0]"  
+        >
+        <br />
+        <button type="submit">Add Task</button>
+    </form>
+</div>
