@@ -65,6 +65,7 @@ nav a {
 
   &:hover {
     background-color: #035998;
+    box-shadow: 0px 0px 1px #fff;
   }
 }
 </style>
