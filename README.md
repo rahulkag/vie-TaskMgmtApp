@@ -89,3 +89,10 @@ Detailed documentation can be found in the README.md file. It provides instructi
 
 Conclusion
 The Task Management Application is a simple yet effective solution for managing tasks. Further enhancements and features can be added based on specific requirements and user feedback.
+
+Screen shot:
+### Add task
+![image](https://github.com/rahulkag/vue-TaskMgmtApp/assets/6812755/7abe396a-6854-4fe8-a4f1-5b1f013a3ef4)
+
+### List view
+![image](https://github.com/rahulkag/vue-TaskMgmtApp/assets/6812755/3a0276d0-7233-42f0-85f5-6d17842c8b07)
