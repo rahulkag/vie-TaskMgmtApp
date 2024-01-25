@@ -1,24 +1,4 @@
-/* @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
 body {
   font-size: 16px;
 }
@@ -67,8 +47,6 @@ body {
 }
 
 
-element.style {
-}
 .form-control {
     display: block;
     width: 100%;
@@ -91,56 +69,23 @@ button, input, optgroup, select, textarea {
     font-size: inherit;
     line-height: inherit;
 }
+button {
+  display: block;
+  min-width: 100px;
+  appearance: none;
+  color: white;
+  padding: 10px;
+  background: #1464a8;
+  border: none;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #fff;
+  color: #044d81;
+  box-shadow: 0px 0px 4px #000;
+}
 *, ::after, ::before {
     box-sizing: border-box;
-}
-user agent stylesheet
-input[type="email" i] {
-    padding-block: 1px;
-    padding-inline: 2px;
-}
-user agent stylesheet
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
-}
-user agent stylesheet
-input {
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-variant-alternates: ;
-    font-variant-position: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
-    font-optical-sizing: ;
-    font-kerning: ;
-    font-feature-settings: ;
-    font-variation-settings: ;
-    text-rendering: auto;
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: field;
-    margin: 0em;
-    padding: 1px 0px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-    padding-block: 1px;
-    padding-inline: 2px;
 }
 body {
     margin: 0;
@@ -151,40 +96,6 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
-}
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
-injected stylesheet
-:host, :root {
-    --rem: 16;
 }
 html {
     font-family: sans-serif;
@@ -204,11 +115,24 @@ html {
   border-color: #c3e6cb;
 }
 .alert {
-  position: fixed;
+  position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+}
+.alert-toast{
   right: 25px;
   width: 200px;
+  position: fixed;
+}
+
+
+.bd-example>.alert+.alert, .bd-example>.nav+.nav, .bd-example>.navbar+.navbar, .bd-example>.progress+.btn, .bd-example>.progress+.progress {
+    margin-top: 1rem;
+}
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
 }

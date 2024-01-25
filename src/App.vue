@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterView />
     </div>
 
-    <div class="footer">Footer</div>
+    <div class="footer"></div>
   </div>
 </template>
 
@@ -50,14 +50,12 @@ body {
     'footer';
   gap: 10px;
   background-color: #f3f3f3;
-
 }
 
 .grid-container>div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
-
 }
 
 nav a {

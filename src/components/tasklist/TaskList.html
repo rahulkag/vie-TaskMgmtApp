@@ -1,13 +1,27 @@
-<div>
-<div v-show="alertTaskCompleted" class="alert alert-success" role="alert">
-    Task completed
-  </div>
-<ul class="list">
-    <li v-for="value in taskListData" :key="value.id" class="list-item">
-        <div><span>Name:</span> {{value.name}}</div>
-        <div><span>Status:</span> {{value.status}}</div>
-        <div><span>Due Date:</span> {{value.dueDate}}</div>
-        <button v-if="value.status !== 'completed'" @click="onTaskComplete(value.id)">Mark Complete</button>
-    </li>
-</ul>
+<div class="margin-20">
+    <div v-show="alertTaskCompleted" class="alert alert-success alert-toast" role="alert">
+        Task completed
+    </div>
+    <div v-if="taskListData.length === 0" class="alert alert-info" role="alert">
+        Task list is empty
+    </div>
+    <ul class="list">
+        <li v-for="value in taskListData" :key="value.id" class="list-item">
+            <div class="row">
+                <span class="label-col-left">Name:</span>
+                <span class="label-col-right">{{value.name}}</span>
+            </div>
+            <div class="row">
+                <span class="label-col-left">Status:</span>
+                <span class="label-col-right">{{value.status}}</span>
+            </div>
+            <div class="row">
+                <span class="label-col-left">Due Date:</span>
+                <span class="label-col-right">{{value.dueDate}}</span>
+            </div>
+            <div class="row">
+                <button v-if="value.status !== 'completed'" @click="onTaskComplete(value.id)">Mark Complete</button>
+            </div>
+        </li>
+    </ul>
 </div>

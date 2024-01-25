@@ -9,14 +9,37 @@ ul {
     &:nth-child(odd){
         background-color: whitesmoke;
     }
-    span{
-        width: 100px;
+    .label-col-left{
         display: inline-block;
         color: #044d81;
     }
     div {
         line-height: 1.5;
         padding-bottom: 2px;
-    }
-    
+    }    
 }
+/* Create four equal columns that floats next to each other */
+.label-col-left {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  .label-col-right {
+    float: left;
+    width: 75%;
+    padding: 10px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (max-width: 600px) {
+    .label-col-left {
+        width: 50%;
+    }
+    .label-col-right {
+        width: 50%;
+    }
+  }
