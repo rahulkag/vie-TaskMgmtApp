@@ -57,4 +57,35 @@ Description: Vuex is a state management library for Vue.js applications. It help
 These libraries and tools form the foundation for developing, testing, and maintaining a Vue.js application with a focus on modern development practices.
 
 
+# Task Management Application
+### Overview
+The Task Management Application is a simple web application developed using Vue.js for managing tasks. It allows users to view a list of tasks, mark tasks as completed, add new tasks, and manage task details. The application employs Vue Router for navigation, Vuex for state management, and utilizes a mock API server using json-server.
 
+### Clone the repository
+git clone https://github.com/yourusername/task-management-app.git
+
+
+### Components
+TaskList.vue
+Description of the TaskList component.
+
+AddTask.vue
+Description of the AddTask component.
+
+Routing
+The application uses Vue Router for navigation between pages.
+
+State Management
+The application utilizes Vuex for centralized state management.
+
+Styling
+The application is styled using SCSS for a responsive and visually appealing design. Vue's scoped styles are employed to encapsulate component-specific styles.
+
+API Integration
+The application simulates API calls using json-server. It fetches tasks and adds new tasks.
+
+Documentation
+Detailed documentation can be found in the README.md file. It provides instructions on running the application locally, project structure, design decisions, and any additional libraries used.
+
+Conclusion
+The Task Management Application is a simple yet effective solution for managing tasks. Further enhancements and features can be added based on specific requirements and user feedback.
